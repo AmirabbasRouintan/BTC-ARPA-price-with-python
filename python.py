@@ -1,28 +1,3 @@
-
-
-import requests
-import json
-import time
-import os
-
-url = 'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT'
-
-while True:
-    try:
-        response = requests.get(url)
-        data = json.loads(response.text)
-        price = float(data['price'])
-        os.system("clear")
-        print(f' {price:.2f}')
-    except:
-        os.system("clear")
-        print(f" ...")
-    time.sleep(1)
-
-
-# ======================================
-
-
 import requests
 import json
 import time
